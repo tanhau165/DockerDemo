@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  h1 Xin chào, Mời bạn thêm sản phẩm
+  form(action='/add', method='get')
+    input(type="text", name="name", placeholder="Tên sản phẩm")
+    input(type="number", name="price", placeholder="Giá sản phẩm")
+    input(type="submit", value="Thêm")

@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  pruduct_db:
+    container_name: product_db
+    build:
+      './product_db'
+
+  webadmin:
+    container_name: webadmin
+    restart: always
+    build: './webadmin'
+    ports:
+      - 9000:9000
+    depends_on:
+      - pruduct_db
+
+  restful:
+    container_name: restfull
+    restart: always
+    build:
+      './ProductAPI'
+    ports:
+      - 8000:8000
+    depends_on:
+      - pruduct_db
+      - webadmin

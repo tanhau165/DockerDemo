@@ -1,0 +1,4 @@
+com/controller/ProductController.class
+com/reponsitory/ProductRepository.class
+com/domain/Product.class
+com/SpringBootWebApplication.class
